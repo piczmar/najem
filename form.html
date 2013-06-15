@@ -14,7 +14,7 @@
     <style>
 
 	 .demoForm {
-        max-width: 300px;
+        max-width: 500px;
         padding: 19px 29px 29px;
         margin: 0 auto 20px;
         background-color: #fff;
@@ -344,7 +344,7 @@
 				<div id="fieldWrapper">
 				<div class="step" id="first">
 					<h3>Podaj swoje dane</h3>
-					<input type="text" class="input-block-level" placeholder="Imie" rel="tooltip" title="sample text" >
+					<input type="text" class="input-block-level" placeholder="Imie"  >
 					<input type="text" class="input-block-level" placeholder="Nazwisko" >
 					<input type="text" class="input-block-level" placeholder="Ulica" >
 					<input type="text" class="input-block-level" placeholder="Miasto" >
@@ -392,45 +392,86 @@
 				</div-->
 				<div class="step" id="firma">
 					<h3>Podaj dane firmy</h3>
-					<input type="text" class="input-block-level" placeholder="Imie" rel="tooltip" title="sample text" >
-					<input type="text" class="input-block-level" placeholder="Nazwisko" >
+					<input type="text" class="input-block-level" placeholder="Nazwa firmy">
+					<input type="text" class="input-block-level" placeholder="Numer KRS" rel="tooltip" title="Numer wpisu do rejestru przedsiębiorców Krajowego Rejestru Sądowego">
 					<input type="text" class="input-block-level" placeholder="Ulica" >
+					<input type="text" class="input-block-level" placeholder="Imię" rel="tooltip" title="Imię osoby reprezentującej firme">
+					<input type="text" class="input-block-level" placeholder="Nazwisko" rel="tooltip" title="Nazwisko osoby reprezentującej firmę">
+					<input type="text" class="input-block-level" placeholder="Nr dowodu osobistego" >
+					<input type="text" class="input-block-level" placeholder="Ulica" rel="tooltip" title="Adres osoby representującej firmę">
 					<input type="text" class="input-block-level" placeholder="Miasto" >
 					<input type="text" class="input-block-level" placeholder="Kod pocztowy" >
-					<input type="hidden" class="link" value="finland" />
+					<input type="hidden" class="link" value="mieszkanie" />
 				</div>
 				<div class="step" id="osoba">
 					<h3>Podaj dane osoby ktora wynajmuje mieszkanie</h3>
-					<input type="text" class="input-block-level" placeholder="Imie" rel="tooltip" title="sample text" >
+					<input type="text" class="input-block-level" placeholder="Imie">
 					<input type="text" class="input-block-level" placeholder="Nazwisko" >
 					<input type="text" class="input-block-level" placeholder="Ulica" >
 					<input type="text" class="input-block-level" placeholder="Miasto" >
 					<input type="text" class="input-block-level" placeholder="Kod pocztowy" >
-					<input type="hidden" class="link" value="finland" />
+					<input type="hidden" class="link" value="mieszkanie" />
 				</div>
-				<div id="finland" class="step">
-					<span class="font_normal_07em_black">Finnish Step 2 - Personal information</span><br />
-					<label for="day_fi">Social Security Number</label><br />
-					<input class="input_field_25em" name="day" id="day_fi" value="DD" />
-					<input class="input_field_25em" name="month" id="month_fi" value="MM" />
-					<input class="input_field_3em" name="year" id="year_fi" value="YYYY" /> - 
-					<input class="input_field_3em" name="lastFour" id="lastFour_fi" value="XXXX" /><br />
-					<label for="countryPrefix_fi">Phone number</label><br />
-					<input class="input_field_35em" name="countryPrefix" id="countryPrefix_fi" value="+358" /> - 
-					<input class="input_field_3em" name="areaCode" id="areaCode_fi" /> - 
-					<input class="input_field_12em" name="phoneNumber" id="phoneNumber_fi" /><br />
-					<label for="email_fi">*Email</label><br />
-					<input class="input_field_12em required email" name="email" id="email_fi" /><br />	 						
+				<div class="step" id="mieszkanie">
+					<h3>Wynajmowane mieszkanie</h3>
+					<input type="text" class="input-block-level" placeholder="Powierzchnia" rel="tooltip" title="Powierzchnia w m2.">
+					<input type="text" class="input-block-level" placeholder="Ulica" rel="tooltip" title="Adres osoby representującej firmę">
+					<input type="text" class="input-block-level" placeholder="Miasto" >
+					<input type="text" class="input-block-level" placeholder="Kod pocztowy" >
+					<p>Data przekazania mieszkania najemcy</p>
+					<div class="controls-row">
+							<label class="radio inline">
+								<label for="dataWynajmu">&nbsp;&nbsp;</label>
+							</label>
+							<label class="radio inline">
+								<input id= "dataWynajmu" type="date" class="input-block-level" >
+							 </label>
+					</div>
+					<p>Na jaki czas chcesz wynająć mieszkanie?</p>
+					<div class="controls-row">
+							<label class="radio inline">
+								<input type="radio" onclick="$('#czas_najmu_do').show();" rel="tooltip" title="Jeśli nie chcesz określać końca umowy"/>
+								Określony
+							</label>
+							<label class="radio inline">
+								<input type="radio" onclick="$('#czas_najmu_do').hide();"/>
+								Nieokreślony
+							 </label>
+					</div>
+					<div id="czas_najmu_od" class="controls-row">
+							<label class="radio inline">
+								<label for="czasNajmuOd">Od</label>
+							</label>
+							<label class="radio inline">
+								<input id= "czasNajmuOd" type="date" class="input-block-level" >
+							 </label>
+					</div>
+					<div id="czas_najmu_do" class="controls-row" hidden='true'>
+							 <label class="radio inline">
+								<label for="czasNajmuDo">Do</label>
+							</label>
+							<label class="radio inline">
+								<input id= "czasNajmuDo" type="date" class="input-block-level" >
+							 </label>
+					</div>
+					
+					<input type="hidden" class="link" value="drobne_naprawy" />
 				</div>
-				<div id="confirmation" class="step">
-					<span class="font_normal_07em_black">Finnish last step - Username</span><br />
-					<label for="username">User name</label><br />
-					<input class="input_field_12em" name="username" id="username" /><br />
-					<label for="password">Password</label><br />
-					<input class="input_field_12em" name="password" id="password" type="password" /><br />
-					<label for="retypePassword">Retype password</label><br />
-					<input class="input_field_12em" name="retypePassword" id="retypePassword" type="password" /><br />
-				</div>
+			
+				<div id="drobne_naprawy" class="step">
+					<p>Czy chcesz jakie drobne naprawy ma ponosić najemca??</p>
+					<div class="controls-row">
+							<label class="radio inline">
+								<input type="radio" onclick="$('#drobneNaprawy').hide();" rel="tooltip" title="Jeśli nie chcesz określać końca umowy"/>
+								Nie
+							</label>
+							<label class="radio inline">
+								<input type="radio"  onclick="$('#drobneNaprawy').show();"/>
+								Tak
+							 </label>
+					</div>
+					<textarea  id="drobneNaprawy" hidden='true' class="input-xlarge" placeholder="Np. naprawa i konserwacja okien, naprawa wykładzin"></textarea>
+			
 				</div>
 				<div id="demoNavigation"> 							
 					<input class="btn btn-large btn-primary" id="back" value="Back" type="reset" />
@@ -440,8 +481,8 @@
 			<hr />
 			
 			<p id="data"></p>
-        </div><!-- /.span4 -->
-       
+        </div><!-- /.span11 -->
+       </div>
       </div><!-- /.row -->
 
       <!-- /END THE FEATURETTES -->
@@ -473,7 +514,7 @@
 	<script>
       $(function(){
 	  
-	  	        $('input[title]').tooltip({placement:'right'});
+	  	    $('input[title]').tooltip({placement:'right'});
             $('input[rel="tooltip"]').tooltip();
 			
 
