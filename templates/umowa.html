@@ -8,14 +8,14 @@
 
     {{#osoba}}
     <p>a </p>
-    <p>{{buyer_os_name}} {{buyer_os_surname}}, zamieszkały pod adresem {{buyer_os_zip}} {{buyer_os_city}}, ul. {{buyer_os_street}} zwanym dalej Najemcą</p>
+    <p>{{buyer_os_name}} {{buyer_os_surname}}, zamieszkały pod adresem {{buyer_os_zip}} {{buyer_os_city}}, ul. {{buyer_os_street}}, legitymujący sie dow. osobistym {{buyer_os_nr_dow}}  zwanym dalej Najemcą</p>
     {{/osoba}}
 
     {{#firma}}
     <p>a firmą </p>
-    <p>{{buyer_company}} z siedzibą w {{buyer_company_street}}, {{buyer_company_zip}} {{buyer_company_city}},
+    <p>{{buyer_company}} z siedzibą pod adresem ul. {{buyer_company_street}}, {{buyer_company_zip}} {{buyer_company_city}},
         wpisana do rejestru KRS pod nr. {{buyer_krs}} reprezentowaną przez {{buyer_name}} {{buyer_surname}}
-        zamieszkałego/ą pod adresem {{zip_code}} {{city}}, ul. {{street}}
+        zamieszkałego/ą pod adresem {{buyer_zip}} {{buyer_city}}, ul. {{buyer_street}}
         legitymujący sie dow. osobistym {{buyer_nr_dow}} zwanym dalej NAJEMCĄ</p>
     {{/firma}}
 
