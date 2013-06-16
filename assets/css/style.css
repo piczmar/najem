@@ -42,3 +42,11 @@ h1 {
     height: 500px;
     overflow: auto;
 }
+
+#wizard {
+	margin-left: 0;
+	padding-left: 85px;
+	padding-right: 85px;
+	padding-bottom: 20px;
+	background-color: #eee;
+}
