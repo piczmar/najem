@@ -9,9 +9,9 @@
   <meta name="author" content="">
 
   <!-- Le styles -->
-  <link href="../assets/css/bootstrap.css" rel="stylesheet">
-  <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
   <style>
 
     /* GLOBAL STYLES
@@ -257,15 +257,15 @@
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
+      <script src="assets/js/html5shiv.js"></script>
       <![endif]-->
 
       <!-- Fav and touch icons -->
-      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-      <link rel="shortcut icon" href="../assets/ico/favicon.png">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="shortcut icon" href="assets/ico/favicon.png">
     </head>
 
     <body>
@@ -299,10 +299,10 @@
                         <h3>Podaj swoje dane</h3>
                         <input id="seller_name" name="seller_name" type="text" class="input-block-level required" placeholder="Imie">
                         <input id="seller_surname" name="seller_surname" type="text" class="input-block-level required" placeholder="Nazwisko">
-                        <input id="seller_nr_dow" name="seller_nr_dow" type="text" class="input-block-level" placeholder="Nr dowodu osobistego">
-                        <input id="seller_street" name="seller_street" type="text" class="input-block-level" placeholder="Ulica">
-                        <input id="seller_city" name="seller_city" type="text" class="input-block-level" placeholder="Miasto">
-                        <input id="seller_zip" name="seller_zip" type="text" class="input-block-level" placeholder="Kod pocztowy">
+                        <input id="seller_nr_dow" name="seller_nr_dow" type="text" class="input-block-level required" placeholder="Nr dowodu osobistego">
+                        <input id="seller_street" name="seller_street" type="text" class="input-block-level required" placeholder="Ulica">
+                        <input id="seller_city" name="seller_city" type="text" class="input-block-level required" placeholder="Miasto">
+                        <input id="seller_zip" name="seller_zip" type="text" class="input-block-level required" placeholder="Kod pocztowy">
                     </div>
                     <div class="step" id="rodzaj_umowy">
                         <h3>Rodzaj najemcy</h3>
@@ -342,11 +342,11 @@
                     </div>
                     <div class="step" id="osoba">
                         <h3>Podaj dane osoby ktora wynajmuje mieszkanie</h3>
-                        <input id="buyer_os_name" name="buyer_name" type="text" class="input-block-level required" placeholder="Imie">
-                        <input id="buyer_os_surname" name="buyer_surname" type="text" class="input-block-level required" placeholder="Nazwisko">
-                        <input id="buyer_os_street" name="buyer_street" type="text" class="input-block-level" placeholder="Ulica">
-                        <input id="buyer_os_city" name="buyer_city" type="text" class="input-block-level" placeholder="Miasto">
-                        <input id="buyer_os_zip" name="buyer_zip" type="text" class="input-block-level" placeholder="Kod pocztowy">
+                        <input id="buyer_os_name" name="buyer_os_name" type="text" class="input-block-level required" placeholder="Imie">
+                        <input id="buyer_os_surname" name="buyer_os_surname" type="text" class="input-block-level required" placeholder="Nazwisko">
+                        <input id="buyer_os_street" name="buyer_os_street" type="text" class="input-block-level" placeholder="Ulica">
+                        <input id="buyer_os_city" name="buyer_os_city" type="text" class="input-block-level" placeholder="Miasto">
+                        <input id="buyer_os_zip" name="buyer_os_zip" type="text" class="input-block-level" placeholder="Kod pocztowy">
                         <input type="hidden" class="link" value="mieszkanie"/>
                     </div>
                     <div class="step" id="mieszkanie">
@@ -429,7 +429,7 @@
             </form>
         </div>
         <div class="span5">
-          <div id="umowa-txt"></div>
+          <div id="umowa-txt" class="long-div"></div>
         </div>
       </div>
     </div>
@@ -443,17 +443,17 @@
       <!-- Three columns of text below the carousel -->
       <div class="row">
         <div class="span4">
-          <img class="img-circle" src="../assets/img/examples/safe.jpg">
+          <img class="img-circle" src="assets/img/examples/safe.jpg">
           <h2>Bezpieczeństwo</h2>
           <p>Przygotowane umowy dają pewność, że Twoje interesy są zabezpieczone. </p>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" src="../assets/img/examples/shield.jpg">
+          <img class="img-circle" src="assets/img/examples/shield.jpg">
           <h2>Gwarancja</h2>
           <p>Proste Umowy gwarantują bezpieczeństwo umów dzięki współpracy z uznanymi radcami prawnymi i adwokatami. Zapewniamy najwyższą ochronę prawną.</p>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" src="../assets/img/examples/plus.png">
+          <img class="img-circle" src="assets/img/examples/plus.png">
           <h2>Prostota</h2>
           <p>Proste rozwiązania są najlepsze dlatego w prosty sposób przygotujesz potrzebne Ci umowy.</p>
         </div><!-- /.span4 -->
@@ -461,15 +461,15 @@
 
       <div class="row">
         <div class="span4">
-          <img class="img-circle" src="../assets/img/examples/klepsydra.jpg">
+          <img class="img-circle" src="assets/img/examples/klepsydra.jpg">
           <h2>Oszczędność czasu</h2>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" src="../assets/img/examples/money.jpg">
+          <img class="img-circle" src="assets/img/examples/money.jpg">
           <h2>Niższe koszty</h2>
         </div><!-- /.span4 -->
         <div class="span4">
-          <img class="img-circle" src="../assets/img/examples/clock.jpg">
+          <img class="img-circle" src="assets/img/examples/clock.jpg">
           <h2>Dostęp 24h</h2>
         </div><!-- /.span4 -->
       </div><!-- /.row -->
@@ -483,9 +483,9 @@
     </div><!-- /.container -->
 
 
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap.js"></script>
-    <script src="../assets/js/holder/holder.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/holder/holder.js"></script>
     <script src="assets/js/jquery.js"></script>
 <script src="assets/js/bootstrap.js"></script>
 

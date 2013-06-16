@@ -3,6 +3,10 @@
 	border-width: 2px;
 }
 
+.ui-formwizard-content label.error {
+    color: red;
+}
+
 .navigation {
 	background-color: #103970;
 	border-radius: 3px;
@@ -22,4 +26,10 @@
 
 h1 {
 	color: #103970;
+}
+
+
+.long-div{
+    height: 500px;
+    overflow: auto;
 }
