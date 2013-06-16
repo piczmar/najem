@@ -94,8 +94,8 @@
                 <div id="fieldWrapper">
                     <div class="step" id="first">
                         <h3>Podaj swoje dane</h3>
-                        <input id="seller_name" name="seller_name" type="text" class="input-block-level" placeholder="Imie">
-                        <input id="seller_surname" name="seller_surname" type="text" class="input-block-level" placeholder="Nazwisko">
+                        <input id="seller_name" name="seller_name" type="text" class="input-block-level required" placeholder="Imie">
+                        <input id="seller_surname" name="seller_surname" type="text" class="input-block-level required" placeholder="Nazwisko">
                         <input id="seller_nr_dow" name="seller_nr_dow" type="text" class="input-block-level" placeholder="Nr dowodu osobistego">
                         <input id="seller_street" name="seller_street" type="text" class="input-block-level" placeholder="Ulica">
                         <input id="seller_city" name="seller_city" type="text" class="input-block-level" placeholder="Miasto">
@@ -293,7 +293,37 @@
         );
 
         var remoteAjax = {}; // empty options object
-        var globData = {date: "16-06-2013"};
+        var globData = {
+            date: "16-06-2013",
+            place: "___",
+            seller_name: "__",
+            seller_surname: "__",
+            seller_street: "__",
+            seller_city: "__",
+            seller_zip: "__",
+            seller_nr_dow:"__",
+            buyer_os_name: "__",
+            buyer_os_surname: "__",
+            buyer_os_street: "__",
+            buyer_os_city: "__",
+            buyer_os_zip: "__"  ,
+            buyer_company: "__",
+            buyer_name: "__",
+            buyer_surname: "__",
+            buyer_street: "__",
+            buyer_city: "__",
+            buyer_zip: "__"  ,
+            rent_size:"__",
+            rent_street: "__",
+            rent_city: "__",
+            rent_zip: "__",
+            dataWynajmu: "__",
+            czasNajmuOd: "__",
+            czasNajmuDo: "__",
+            rent_month_cost: "__",
+            drobneNaprawy: "__"
+
+        };
         $("#demoForm .step").each(function(){ // for each step in the wizard, add an option to the remoteAjax object...
             remoteAjax[$(this).attr("id")] = {
                 url : "json.html", // the url which stores the stuff in db for each step
@@ -304,7 +334,6 @@
                     for(var i=0; i<data.length; i++){
                         globData[data[i].name]=data[i].value;
                     }
-                    globData['city']=data['seller_city'];
 
                     if(globData.goto){
                         if(globData.goto ==="osoba"){

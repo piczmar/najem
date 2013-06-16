@@ -1,3 +1,5 @@
+.error { background: #ffdddd; } /* I have since removed the errorClass option */
+.field .txt {background:transparent none repeat scroll 0 0;border:medium none;border-color:red;font-size:11px;width:130px; margin:5px 0;}
 
 .demoForm {
     max-width: 500px;
