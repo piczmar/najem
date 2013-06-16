@@ -83,7 +83,11 @@ $(function () {
                     }
                     console.log(globData);
 
-                    $('#umowa-txt').mustache('umowa-template', globData, { method:'html' });
+                  $('.advantage').fadeOut(400, function(){
+                        $('#wizard').removeClass('span3');
+                        $('#wizard').addClass('span4');
+                        $('#umowa-txt').mustache('umowa-template', globData, { method:'html' });
+                    });
                 },
                 success : function(data){
                     if(data){ //data is either true or false (returned from store_in_database.html) simulating successful / failing store
