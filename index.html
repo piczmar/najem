@@ -9,9 +9,9 @@
   <meta name="author" content="">
 
   <!-- Le styles -->
-  <link href="../assets/css/bootstrap.css" rel="stylesheet">
-  <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css">
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
   <style>
 
     /* GLOBAL STYLES
@@ -257,15 +257,15 @@
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
-      <script src="../assets/js/html5shiv.js"></script>
+      <script src="assets/js/html5shiv.js"></script>
       <![endif]-->
 
       <!-- Fav and touch icons -->
-      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../assets/ico/apple-touch-icon-144-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../assets/ico/apple-touch-icon-114-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="../assets/ico/apple-touch-icon-72-precomposed.png">
-      <link rel="apple-touch-icon-precomposed" href="../assets/ico/apple-touch-icon-57-precomposed.png">
-      <link rel="shortcut icon" href="../assets/ico/favicon.png">
+      <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+      <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+      <link rel="shortcut icon" href="assets/ico/favicon.png">
     </head>
 
     <body>
@@ -322,7 +322,6 @@
                 <!-- <p>Proste rozwiązania są najlepsze dlatego w prosty sposób przygotujesz potrzebne Ci umowy.</p>   -->
               </div>
             </div><!-- /.span4 -->
-
             <div class="row-fluid">
               <div class="span2">
                 <img class="img-circle" src="../assets/img/examples/klepsydra.jpg">  
@@ -351,143 +350,142 @@
           </div>
           <div class="span3">
             <form id="demoForm" method="post" action="json.html" class="demoForm">
-              <div id="fieldWrapper">
-                <div class="step" id="first">
-                  <h3>Podaj swoje dane</h3>
-                  <input id="seller_name" name="seller_name" type="text" class="input-block-level required" placeholder="Imie">
-                  <input id="seller_surname" name="seller_surname" type="text" class="input-block-level required" placeholder="Nazwisko">
-                  <input id="seller_nr_dow" name="seller_nr_dow" type="text" class="input-block-level" placeholder="Nr dowodu osobistego">
-                  <input id="seller_street" name="seller_street" type="text" class="input-block-level" placeholder="Ulica">
-                  <input id="seller_city" name="seller_city" type="text" class="input-block-level" placeholder="Miasto">
-                  <input id="seller_zip" name="seller_zip" type="text" class="input-block-level" placeholder="Kod pocztowy">
-                </div>
-                <div class="step" id="rodzaj_umowy">
-                  <h3>Rodzaj najemcy</h3>
-                  <p>Czy najemca to osoba fizyczna czy firma?</p>
-                  <div class="controls-row">
-                    <label class="radio inline">
-                      <input type="radio" class="link required" id="osoba" value="osoba" name="goto"
-                      checked="true"/>
-                      Osoba
-                    </label>
-                    <label class="radio inline">
-                      <input type="radio" class="link" id="firma" value="firma" name="goto"/>
-                      Firma
-                    </label>
-                  </div>
-                  <br/>
-                </div>
+                <div id="fieldWrapper">
+                    <div class="step" id="first">
+                        <h3>Podaj swoje dane</h3>
+                        <input id="seller_name" name="seller_name" type="text" class="input-block-level required" placeholder="Imie">
+                        <input id="seller_surname" name="seller_surname" type="text" class="input-block-level required" placeholder="Nazwisko">
+                        <input id="seller_nr_dow" name="seller_nr_dow" type="text" class="input-block-level required" placeholder="Nr dowodu osobistego">
+                        <input id="seller_street" name="seller_street" type="text" class="input-block-level required" placeholder="Ulica">
+                        <input id="seller_city" name="seller_city" type="text" class="input-block-level required" placeholder="Miasto">
+                        <input id="seller_zip" name="seller_zip" type="text" class="input-block-level required" placeholder="Kod pocztowy">
+                    </div>
+                    <div class="step" id="rodzaj_umowy">
+                        <h3>Rodzaj najemcy</h3>
+                        <p>Czy najemca to osoba fizyczna czy firma?</p>
+                        <div class="controls-row">
+                            <label class="radio inline">
+                                <input type="radio" class="link required" id="osoba" value="osoba" name="goto"
+                                       checked="true"/>
+                                Osoba
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" class="link" id="firma" value="firma" name="goto"/>
+                                Firma
+                            </label>
+                        </div>
+                        <br/>
+                    </div>
 
-                <div class="step" id="firma">
-                  <h3>Podaj dane firmy</h3>
-                  <input id="buyer_company" name="buyer_company"  type="text" class="input-block-level" placeholder="Nazwa firmy">
-                  <input id="buyer_krs" name="buyer_krs" type="text" class="input-block-level" placeholder="Numer KRS" rel="tooltip"
-                  title="Numer wpisu do rejestru przedsiębiorców Krajowego Rejestru Sądowego">
-                  <input id="buyer_company_street" name="buyer_street" type="text" class="input-block-level" placeholder="Siedziba firmy - ulica">
-                  <input id="buyer_company_city" name="buyer_company_city" type="text" class="input-block-level" placeholder="Siedziba firmy - miasto">
-                  <input id="buyer_company_zip" name="buyer_company_zip" type="text" class="input-block-level" placeholder="Siedziba firmy - kod poczt.">
-                  <input id="buyer_name" name="buyer_name" type="text" class="input-block-level" placeholder="Imię" rel="tooltip"
-                  title="Imię osoby reprezentującej firme">
-                  <input id="buyer_surname" name="buyer_surname" type="text" class="input-block-level" placeholder="Nazwisko" rel="tooltip"
-                  title="Nazwisko osoby reprezentującej firmę">
-                  <input id="buyer_nr_dow" name="buyer_nr_dow" type="text" class="input-block-level" placeholder="Nr dowodu osobistego">
-                  <input id="buyer_street" name="buyer_street" type="text" class="input-block-level" placeholder="Ulica" rel="tooltip"
-                  title="Adres osoby representującej firmę">
-                  <input id="buyer_city" name="buyer_city" type="text" class="input-block-level" placeholder="Miasto">
-                  <input id="buyer_zip" name="buyer_zip" type="text" class="input-block-level" placeholder="Kod pocztowy">
-                  <input type="hidden" class="link" value="mieszkanie"/>
-                </div>
-                <div class="step" id="osoba">
-                  <h3>Podaj dane osoby ktora wynajmuje mieszkanie</h3>
-                  <input id="buyer_os_name" name="buyer_name" type="text" class="input-block-level required" placeholder="Imie">
-                  <input id="buyer_os_surname" name="buyer_surname" type="text" class="input-block-level required" placeholder="Nazwisko">
-                  <input id="buyer_os_street" name="buyer_street" type="text" class="input-block-level" placeholder="Ulica">
-                  <input id="buyer_os_city" name="buyer_city" type="text" class="input-block-level" placeholder="Miasto">
-                  <input id="buyer_os_zip" name="buyer_zip" type="text" class="input-block-level" placeholder="Kod pocztowy">
-                  <input type="hidden" class="link" value="mieszkanie"/>
-                </div>
-                <div class="step" id="mieszkanie">
-                  <h3>Wynajmowane mieszkanie</h3>
-                  <input id="rent_size" name="rent_size" type="text" class="input-block-level" placeholder="Powierzchnia" rel="tooltip"
-                  title="Powierzchnia w m2.">
-                  <input id="rent_street" name="rent_street" type="text" class="input-block-level" placeholder="Ulica" rel="tooltip"
-                  title="Adres osoby representującej firmę">
-                  <input id="rent_city" name="rent_city" type="text" class="input-block-level" placeholder="Miasto">
-                  <input  id="rent_zip" name="rent_zip" type="text" class="input-block-level" placeholder="Kod pocztowy">
+                    <div class="step" id="firma">
+                        <h3>Podaj dane firmy</h3>
+                        <input id="buyer_company" name="buyer_company"  type="text" class="input-block-level" placeholder="Nazwa firmy">
+                        <input id="buyer_krs" name="buyer_krs" type="text" class="input-block-level" placeholder="Numer KRS" rel="tooltip"
+                               title="Numer wpisu do rejestru przedsiębiorców Krajowego Rejestru Sądowego">
+                        <input id="buyer_company_street" name="buyer_street" type="text" class="input-block-level" placeholder="Siedziba firmy - ulica">
+                        <input id="buyer_company_city" name="buyer_company_city" type="text" class="input-block-level" placeholder="Siedziba firmy - miasto">
+                        <input id="buyer_company_zip" name="buyer_company_zip" type="text" class="input-block-level" placeholder="Siedziba firmy - kod poczt.">
+                        <input id="buyer_name" name="buyer_name" type="text" class="input-block-level" placeholder="Imię" rel="tooltip"
+                               title="Imię osoby reprezentującej firme">
+                        <input id="buyer_surname" name="buyer_surname" type="text" class="input-block-level" placeholder="Nazwisko" rel="tooltip"
+                               title="Nazwisko osoby reprezentującej firmę">
+                        <input id="buyer_nr_dow" name="buyer_nr_dow" type="text" class="input-block-level" placeholder="Nr dowodu osobistego">
+                        <input id="buyer_street" name="buyer_street" type="text" class="input-block-level" placeholder="Ulica" rel="tooltip"
+                               title="Adres osoby representującej firmę">
+                        <input id="buyer_city" name="buyer_city" type="text" class="input-block-level" placeholder="Miasto">
+                        <input id="buyer_zip" name="buyer_zip" type="text" class="input-block-level" placeholder="Kod pocztowy">
+                        <input type="hidden" class="link" value="mieszkanie"/>
+                    </div>
+                    <div class="step" id="osoba">
+                        <h3>Podaj dane osoby ktora wynajmuje mieszkanie</h3>
+                        <input id="buyer_os_name" name="buyer_os_name" type="text" class="input-block-level required" placeholder="Imie">
+                        <input id="buyer_os_surname" name="buyer_os_surname" type="text" class="input-block-level required" placeholder="Nazwisko">
+                        <input id="buyer_os_street" name="buyer_os_street" type="text" class="input-block-level" placeholder="Ulica">
+                        <input id="buyer_os_city" name="buyer_os_city" type="text" class="input-block-level" placeholder="Miasto">
+                        <input id="buyer_os_zip" name="buyer_os_zip" type="text" class="input-block-level" placeholder="Kod pocztowy">
+                        <input type="hidden" class="link" value="mieszkanie"/>
+                    </div>
+                    <div class="step" id="mieszkanie">
+                        <h3>Wynajmowane mieszkanie</h3>
+                        <input id="rent_size" name="rent_size" type="text" class="input-block-level" placeholder="Powierzchnia" rel="tooltip"
+                               title="Powierzchnia w m2.">
+                        <input id="rent_street" name="rent_street" type="text" class="input-block-level" placeholder="Ulica" rel="tooltip"
+                               title="Adres osoby representującej firmę">
+                        <input id="rent_city" name="rent_city" type="text" class="input-block-level" placeholder="Miasto">
+                        <input  id="rent_zip" name="rent_zip" type="text" class="input-block-level" placeholder="Kod pocztowy">
 
-                  <p>Data przekazania mieszkania najemcy</p>
+                        <p>Data przekazania mieszkania najemcy</p>
 
-                  <div class="controls-row">
-                    <label class="radio inline">
-                      <label for="dataWynajmu">&nbsp;&nbsp;</label>
-                    </label>
-                    <label class="radio inline">
-                      <input id="dataWynajmu" type="date" class="input-block-level">
-                    </label>
-                  </div>
-                  <p>Na jaki czas chcesz wynająć mieszkanie?</p>
+                        <div class="controls-row">
+                            <label class="radio inline">
+                                <label for="dataWynajmu">&nbsp;&nbsp;</label>
+                            </label>
+                            <label class="radio inline">
+                                <input id="dataWynajmu" type="date" class="input-block-level">
+                            </label>
+                        </div>
+                        <p>Na jaki czas chcesz wynająć mieszkanie?</p>
 
-                  <div class="controls-row">
-                    <label class="radio inline">
-                      <input type="radio" id="okreslony" name="czas_najmu" value="okreslony"  onclick="$('#czas_najmu_do').show();" rel="tooltip"
-                      title="Jeśli nie chcesz określać końca umowy"/>
-                      Określony
-                    </label>
-                    <label class="radio inline">
-                      <input type="radio" id="nieokreslony"  name="czas_najmu" value="nieokreslony" onclick="$('#czas_najmu_do').hide();"/>
-                      Nieokreślony
-                    </label>
-                  </div>
+                        <div class="controls-row">
+                            <label class="radio inline">
+                                <input type="radio" id="okreslony" name="czas_najmu" value="okreslony"  onclick="$('#czas_najmu_do').show();" rel="tooltip"
+                                       title="Jeśli nie chcesz określać końca umowy"/>
+                                Określony
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" id="nieokreslony"  name="czas_najmu" value="nieokreslony" onclick="$('#czas_najmu_do').hide();"/>
+                                Nieokreślony
+                            </label>
+                        </div>
 
-                  <div id="czas_najmu_od" class="controls-row">
-                    <label class="radio inline">
-                      <label for="czasNajmuOd">Od</label>
-                    </label>
-                    <label class="radio inline">
-                      <input id="czasNajmuOd" name="czasNajmuOd" type="date" class="input-block-level required">
-                    </label>
-                  </div>
-                  <div id="czas_najmu_do" class="controls-row" hidden='true'>
-                    <label class="radio inline">
-                      <label for="czasNajmuDo">Do</label>
-                    </label>
-                    <label class="radio inline">
-                      <input id="czasNajmuDo" name="czasNajmuDo" type="date" class="input-block-level">
-                    </label>
-                  </div>
-                  <input  id="rent_month_cost" name="rent_month_cost" type="text" class="input-block-level" placeholder="Miesięczny czynsz">
+                        <div id="czas_najmu_od" class="controls-row">
+                            <label class="radio inline">
+                                <label for="czasNajmuOd">Od</label>
+                            </label>
+                            <label class="radio inline">
+                                <input id="czasNajmuOd" name="czasNajmuOd" type="date" class="input-block-level required">
+                            </label>
+                        </div>
+                        <div id="czas_najmu_do" class="controls-row" hidden='true'>
+                            <label class="radio inline">
+                                <label for="czasNajmuDo">Do</label>
+                            </label>
+                            <label class="radio inline">
+                                <input id="czasNajmuDo" name="czasNajmuDo" type="date" class="input-block-level">
+                            </label>
+                        </div>
+                        <input  id="rent_month_cost" name="rent_month_cost" type="text" class="input-block-level" placeholder="Miesięczny czynsz">
 
-                  <input type="hidden" class="link" value="drobne_naprawy"/>
-                </div>
+                        <input type="hidden" class="link" value="drobne_naprawy"/>
+                    </div>
 
-                <div id="drobne_naprawy" class="step">
-                  <p>Czy chcesz jakie drobne naprawy ma ponosić najemca??</p>
+                    <div id="drobne_naprawy" class="step">
+                        <p>Czy chcesz jakie drobne naprawy ma ponosić najemca??</p>
 
-                  <div class="controls-row">
-                    <label class="radio inline">
-                      <input type="radio" onclick="$('#drobneNaprawy').hide();" name="drobne_naprawy" />
-                      Nie
-                    </label>
-                    <label class="radio inline">
-                      <input type="radio" onclick="$('#drobneNaprawy').show();" name="drobne_naprawy" />
-                      Tak
-                    </label>
-                  </div>
-                  <textarea id="drobneNaprawy" hidden='true' class="input-xlarge"
-                  placeholder="Np. naprawa i konserwacja okien, naprawa wykładzin"></textarea>
+                        <div class="controls-row">
+                            <label class="radio inline">
+                                <input type="radio" onclick="$('#drobneNaprawy').hide();" name="drobne_naprawy" />
+                                Nie
+                            </label>
+                            <label class="radio inline">
+                                <input type="radio" onclick="$('#drobneNaprawy').show();" name="drobne_naprawy" />
+                                Tak
+                            </label>
+                        </div>
+                        <textarea id="drobneNaprawy" hidden='true' class="input-xlarge"
+                                  placeholder="Np. naprawa i konserwacja okien, naprawa wykładzin"></textarea>
 
-                </div>
-                <div id="demoNavigation">
-                  <input class="btn btn-large btn-primary" id="back" value="Wróć" type="reset"/>
-                  <input class="btn btn-large btn-primary" id="next" value="Dalej" type="submit"/>
-                </div>
+                    </div>
+                    <div id="demoNavigation">
+                        <input class="btn btn-large btn-primary" id="back" value="Wróć" type="reset"/>
+                        <input class="btn btn-large btn-primary" id="next" value="Dalej" type="submit"/>
+                    </div>
 
               </div>
             </form>
-          </div>
-          <div class="span5">
-            <div id="umowa-txt"></div>
-          </div>
+        </div>
+        <div class="span5">
+          <div id="umowa-txt" class="long-div"></div>
         </div>
       </div>
 
@@ -496,9 +494,6 @@
     <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <div class="container marketing">
-
-      <!-- Three columns of text below the carousel -->
-
 
       <!-- FOOTER -->
       <footer>
@@ -509,9 +504,9 @@
     </div><!-- /.container -->
 
 
-    <script src="../assets/js/jquery.js"></script>
-    <script src="../assets/js/bootstrap.js"></script>
-    <script src="../assets/js/holder/holder.js"></script>
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/holder/holder.js"></script>
     <script src="assets/js/jquery.js"></script>
     <script src="assets/js/bootstrap.js"></script>
 

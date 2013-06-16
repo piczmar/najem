@@ -104,7 +104,7 @@ $(function () {
             zip_code: '23-232'
         };
 
-        $.Mustache.load('templates/umowa.html').done(function () {
-            //$('#umowa-txt').mustache('simple-hello', viewData, { method:'html' });
+        $.Mustache.load('templates/greetings.html').done(function () {
+            $('#umowa-txt').mustache('simple-hello', viewData, { method:'html' });
         });
     });
