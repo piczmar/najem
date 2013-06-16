@@ -23,3 +23,13 @@
 h1 {
 	color: #103970;
 }
+
+.advantage div.row-fluid {
+	margin: 10px 0px;
+}
+
+.inner-img {
+	margin: auto;
+	width: 90%;
+	height: 120px;
+}
