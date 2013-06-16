@@ -1,0 +1,42 @@
+<script id="umowa-template" type="text/html">
+    <h3>Umowa Najmu</h3>
+    <p>Zawarta  w dniu  {{date}} r. w {{place}} pomiędzy:</p>
+    <p>{{seller_name}} {{seller_surname}}, zamieszkały pod adresem {{seller_zip}} {{seller_city}}, ul. {{seller_street}} {{seller_street_no}}
+        legitymujący sie dow. osobistym {{seller_nr_dow}} zwanym dalej WYNAJMUJĄCYM
+    </p>
+
+    {{#osoba}}
+    <p>a </p>
+    <p>{{buyer_os_name}} {{buyer_os_surname}}, zamieszkały pod adresem {{buyer_os_zip}} {{buyer_os_city}}, ul. {{buyer_os_street}} zwanym dalej NAJEMCĄ</p>
+    {{/osoba}}
+
+    {{#firma}}
+    <p>a firmą </p>
+    <p>{{buyer_company}} z siedzibą w {{buyer_company_street}}, {{buyer_company_zip}} {{buyer_company_city}},
+        wpisana do rejestru KRS pod nr. {{buyer_krs}} reprezentowaną przez {{buyer_name}} {{buyer_surname}}
+        zamieszkałego/ą pod adresem {{zip_code}} {{city}}, ul. {{street}}
+        legitymujący sie dow. osobistym {{buyer_nr_dow}} zwanym dalej NAJEMCĄ</p>
+    {{/firma}}
+
+
+    <h4>&sect;1. Przedmiot najmu</h4>
+    <p>WYNAJMUJĄCY oświadcza, że jest właścicielem i posiada wszelkie prawa do zawierania stosownych umów najmu oraz
+        administrowania budynkiem położonym pod adresem {{rent_zip}} {{rent_city}}, ul. {{rent_street}}.
+        Celem potwierdzenia powyższego WYNAJMUJĄCY przedstawia następujące dokumenty:
+        1.	Dokument potwierdzający tytuł prawny do budynku ( lokalu ) bądź wykazujący uprawnienie Wynajmującego do zarządzania i administrowania budynkiem oraz zawierania umów najmu.
+    </p>
+
+    <h4>&sect;2.</h4>
+    <p>1. Na mocy niniejszej umowy WYNAJMUJĄCY wynajmuje a NAJEMCA bierze w najem od dnia {{czasNajmuOd}} r.
+        lokal wraz ze wszystkimi powierzchniami wspólnymi, ciągami komunikacyjnymi, sanitariatami itd., niezbędnymi do prawidłowego funkcjonowania przedmiotu najmu,
+        z których NAJEMCA może korzystać bez żadnych ograniczeń w okresie trwania umowy najmu.</p>
+
+    <p>2. Ogólna powierzchnia oddana NAJEMCY w najem wynosi {{rent_size}} m2 (w tym powierzchnie wspólne)</p>
+
+    <h4>&sect;3.</h4>
+    <p>1. Miesięczny czynsz najmu strony ustalają na kwotę {{rent_month_cost}} zł netto za powierzchnię określoną w § 2 pkt 2.</p>
+    <p>2. Oprócz czynszu NAJEMCA zobowiązany jest do ponoszenia wszelkich opłat eksploatacyjnych związanych z funkcjonowaniem budynku oraz wynajętej na podstawie niniejszej umowy powierzchni.</p>
+
+
+
+</script>

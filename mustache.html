@@ -493,7 +493,7 @@ body {
         </div>
         <!-- /.span11 -->
         <div class="span6">
-            <h3>Umowa najmu mieszkania</h3>
+            <div id="umowa-txt"></div>
         </div>
     </div>
     <!-- /.row -->
@@ -525,6 +525,10 @@ body {
 <script type="text/javascript" src="assets/js/jquery-ui-1.8.5.custom.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery.form.wizard.js"></script>
 
+
+<script src="assets/js/jquery-mustache.js"></script>
+<script src="assets/js/mustache.js"></script>
+
 <script>
     $(function () {
 
@@ -550,6 +554,20 @@ body {
                     }
                 }
         );
+
+        var viewData = {
+            date:"17-06-2013",
+            place:"łódź",
+            street:"Kolejowa",
+            street_no:"23",
+            name:"Adam",
+            surname:"Kowalski",
+            zip_code: '23-232'
+        };
+
+        $.Mustache.load('templates/greetings.html').done(function () {
+            $('#umowa-txt').mustache('simple-hello', viewData, { method:'html' });
+        });
     });
 </script>
 
