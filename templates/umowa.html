@@ -1,28 +1,28 @@
 <script id="umowa-template" type="text/html">
     <h3>Umowa Najmu</h3>
-    <p>Miejsce i data podpisania umowy:  {{seller_city}},{{date}} r.</p>
+    <p>Miejsce i data podpisania umowy:  <b>{{seller_city}},{{date}}</b> r.</p>
     <p>Umowa zawarta pomiędzy:</p>
-    <p>{{seller_name}} {{seller_surname}}, zamieszkały pod adresem {{seller_zip}} {{seller_city}}, ul. {{seller_street}}
+    <p><b>{{seller_name}} {{seller_surname}}</b>, zamieszkały pod adresem <b>{{seller_zip}} {{seller_city}}</b>, ul. <b>{{seller_street}}</b>
         legitymujący sie dow. osobistym {{seller_nr_dow}} zwanym dalej Wynajmującym
     </p>
 
     {{#osoba}}
     <p>a </p>
-    <p>{{buyer_os_name}} {{buyer_os_surname}}, zamieszkały pod adresem {{buyer_os_zip}} {{buyer_os_city}}, ul. {{buyer_os_street}}, legitymujący sie dow. osobistym {{buyer_os_nr_dow}}  zwanym dalej Najemcą</p>
+    <p><b>{{buyer_os_name}} {{buyer_os_surname}}</b>, zamieszkały pod adresem <b>{{buyer_os_zip}} {{buyer_os_city}}</b>, ul. <b>{{buyer_os_street}}</b>, legitymujący sie dow. osobistym <b>{{buyer_os_nr_dow}}</b>  zwanym dalej Najemcą</p>
     {{/osoba}}
 
     {{#firma}}
     <p>a firmą </p>
-    <p>{{buyer_company}} z siedzibą pod adresem ul. {{buyer_company_street}}, {{buyer_company_zip}} {{buyer_company_city}},
-        wpisana do rejestru KRS pod nr. {{buyer_krs}} reprezentowaną przez {{buyer_name}} {{buyer_surname}}
-        zamieszkałego/ą pod adresem {{buyer_zip}} {{buyer_city}}, ul. {{buyer_street}}
-        legitymujący sie dow. osobistym {{buyer_nr_dow}} zwanym dalej NAJEMCĄ</p>
+    <p><b>{{buyer_company}} </b>z siedzibą pod adresem ul. <b>{{buyer_company_street}}</b>, <b>{{buyer_company_zip}} {{buyer_company_city}}</b>,
+        wpisana do rejestru KRS pod nr. <b>{{buyer_krs}}</b> reprezentowaną przez <b>{{buyer_name}} {{buyer_surname}}</b>
+        zamieszkałego/ą pod adresem <b>{{buyer_zip}} {{buyer_city}}</b>, ul. <b>{{buyer_street}}</b>
+        legitymujący sie dow. osobistym <b>{{buyer_nr_dow}}</b> zwanym dalej NAJEMCĄ</p>
     {{/firma}}
 
 
     <h4>&sect;1. Przedmiot najmu</h4>
     <p>Wynajmujący oświadcza, że jest właścicielem i posiada wszelkie prawa do zawierania stosownych umów najmu oraz
-        administrowania budynkiem położonym pod adresem {{rent_zip}} {{rent_city}}, ul. {{rent_street}}.
+        administrowania budynkiem położonym pod adresem <b>{{rent_zip}} {{rent_city}}</b>, ul. <b>{{rent_street}}</b>.
         Celem potwierdzenia powyższego Wynajmujący przedstawia następujące dokumenty:
         <ol>
             <li>Dokument potwierdzający tytuł prawny do budynku ( lokalu ) bądź wykazujący uprawnienie Wynajmującego do zarządzania i administrowania budynkiem oraz zawierania umów najmu.</li>
@@ -30,14 +30,14 @@
     </p>
 
     <h4>&sect;2.</h4>
-    <p>1. Na mocy niniejszej umowy Wynajmujący wynajmuje a Najemca bierze w najem od dnia {{czasNajmuOd}} r.
+    <p>1. Na mocy niniejszej umowy Wynajmujący wynajmuje a Najemca bierze w najem od dnia <b>{{czasNajmuOd}}</b> r.
         lokal wraz ze wszystkimi powierzchniami wspólnymi, ciągami komunikacyjnymi, sanitariatami itd., niezbędnymi do prawidłowego funkcjonowania przedmiotu najmu,
         z których Najemca może korzystać bez żadnych ograniczeń w okresie trwania umowy najmu.</p>
 
-    <p>2. Ogólna powierzchnia oddana NAJEMCY w najem wynosi {{rent_size}} m2 (w tym powierzchnie wspólne)</p>
+    <p>2. Ogólna powierzchnia oddana NAJEMCY w najem wynosi <b>{{rent_size}}</b> m2 (w tym powierzchnie wspólne)</p>
 
     <h4>&sect;3.</h4>
-    <p>1. Miesięczny czynsz najmu strony ustalają na kwotę {{rent_month_cost}} zł netto za powierzchnię określoną w § 2 pkt 2.</p>
+    <p>1. Miesięczny czynsz najmu strony ustalają na kwotę <b>{{rent_month_cost}}</b> zł netto za powierzchnię określoną w § 2 pkt 2.</p>
     <p>2. Oprócz czynszu Najemca zobowiązany jest do ponoszenia wszelkich opłat eksploatacyjnych związanych z funkcjonowaniem budynku oraz wynajętej na podstawie niniejszej umowy powierzchni.</p>
 
     <p>Umowa sporządzona została w trzech jednobrzmiących egzemplarzach, dwa dla Wynajmującego i jednym dla Najemcy.</p>

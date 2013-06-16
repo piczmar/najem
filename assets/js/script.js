@@ -66,7 +66,7 @@ $(function () {
                 dataType : 'json',
                 beforeSubmit: function(data){
 
-                    console.log("data sent to the server: " + $.param(data) + " "+JSON.stringify(data))
+                    console.log("data sent to the server: " + $.param(data) + " "+JSON.stringify(data));
                     for(var i=0; i<data.length; i++){
                         globData[data[i].name]=data[i].value;
                     }
@@ -88,6 +88,7 @@ $(function () {
                         $('#wizard').addClass('span4');
                         $('#umowa-txt').mustache('umowa-template', globData, { method:'html' });
                     });
+
                 },
                 success : function(data){
                     if(data){ //data is either true or false (returned from store_in_database.html) simulating successful / failing store
