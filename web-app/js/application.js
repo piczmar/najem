@@ -1,4 +1,3 @@
-$(function () {
 
     $(function () {
 
@@ -120,4 +119,3 @@ $(function () {
             //$('#umowa-txt').mustache('simple-hello', viewData, { method:'html' });
         });
     });;
-});
