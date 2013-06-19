@@ -36,10 +36,25 @@ class TestController {
     }
 
     def getInputs(){
+        println "params: ${params}"
+
+        def stepNo = params.stepNumber as Long
+        def step = Step.findByNumber(stepNo)
+        println step
         def data = []
-        5.times {i->
-            data.add([id:"id${i}",value: "id${i}", placeholder: "Sample placeholder ${i}" ])
+//        5.times {i->
+//            data.add([id:"id${i}",value: "id${i}", placeholder: "Sample placeholder ${i}" ])
+//        }
+        if (step) {
+//            data = Input.findAll {
+//                step: step
+//                order('number')
+//            }
+            data = Input.findAllByStep(step)
+        }else{
+            data = [end: true]
         }
+        println data
         render text: ["response": data] as JSON, contentType: 'application/json', status: 200
     }
 }

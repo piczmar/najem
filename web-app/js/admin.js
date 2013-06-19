@@ -7,6 +7,7 @@ $(function () {
 //        }
     $('#next').click(function () {
         console.log('next..')
+
         test();
         return false; // do not submit the form
     });
@@ -26,13 +27,27 @@ function getInputTemplate() {
 }
 
 function addInputsData(inputTemplate, form) {
-    $.getJSON('test/getInputs').done(function (data) {
+    $.post('test/getInputs',{stepNumber:$("#demoForm input[name=stepNumber]").val()}).done(function (data) {
+
+        // remove old data
+        var matches = $('#demoFormInput :input').filter(function() { return this.name != 'stepNumber' });
+        matches.remove();
+
+
         console.log(data.response);
-        for (var i = 0; i < data.response.length; i++) {
-            //var html = Mustache.to_html( '<input id="{{id}}" name="{{id}}" value="{{value}}" type="text" class="input-block-level required" placeholder="{{placeholder}}">',data.response[i]);
-            var html =  $.Mustache.render(inputTemplate, data.response[i]);
-            console.log(html);
-            $('#demoForm').append(html);
+        if(data.response.end){
+            $('#demoFormInput').append('<p>My friend, this is the end.</p>');
+        } else{
+    //        var controls =  $('#demoForm').find('.control-group').find('.controls');
+            for (var i = 0; i < data.response.length; i++) {
+                //var html = Mustache.to_html( '<input id="{{id}}" name="{{id}}" value="{{value}}" type="text" class="input-block-level required" placeholder="{{placeholder}}">',data.response[i]);
+                var html =  $.Mustache.render(inputTemplate, data.response[i]);
+                console.log(html);
+                $('#demoFormInput').append(html);
+            }
+            var currentStepNo = $("#demoForm input[name=stepNumber]").val();
+            currentStepNo++;
+            $("#demoForm input[name=stepNumber]").val(currentStepNo);
         }
     });
 }

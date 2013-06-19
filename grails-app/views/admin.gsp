@@ -62,22 +62,8 @@
 
             <!-- Text input-->
             <div class="control-group">
-                <div class="controls">
-                    <input id="seller_name" name="seller_name" value="Jan" type="text"
-                           class="input-block-level required"
-                           placeholder="Imie">
-                    <input id="seller_surname" name="seller_surname" value="Kowalski" type="text"
-                           class="input-block-level required" placeholder="Nazwisko">
-                    <input id="seller_nr_dow" name="seller_nr_dow" value="ALC120211" type="text"
-                           class="input-block-level required" placeholder="Nr dowodu osobistego">
-                    <input id="seller_street" name="seller_street" value="Klonowa 4 m.1 " type="text"
-                           class="input-block-level required" placeholder="Ulica">
-                    <input id="seller_city" name="seller_city" value="Łódź" type="text"
-                           class="input-block-level required"
-                           placeholder="Miasto">
-                    <input id="seller_zip" name="seller_zip" value="94-107" type="text"
-                           class="input-block-level required"
-                           placeholder="Kod pocztowy">
+                <div id="demoFormInput" class="controls">
+                    <input type="hidden" id="stepNumber" name="stepNumber" value="1" />
                 </div>
             </div>
 
