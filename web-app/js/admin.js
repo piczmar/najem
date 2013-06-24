@@ -6,6 +6,8 @@ $(function () {
     $('#next').click(function () {
         console.log('next..')
         //TODO: save what was filled in for current step - store in session? database temp table? workspace table for logged in users?
+        $("#demoForm").ajaxSubmit({url: 'test/stepSubmit', type: 'post'})
+
 
         var stepNo = $("#demoForm input[name=stepNumber]").val();
         stepNo++;
@@ -53,7 +55,7 @@ function printStep(stepNo, form) {
         var inputs = data.response;
         console.log(inputs);
         if (data.response.end) {
-            form.append('<div id="endMsg">My friend, this is the end.</div>');
+            form.append('<p>My friend, this is the end.</p>');
         } else {
             for (var i = 0; i < inputs.length; i++) {
                 var input = inputs[i];
@@ -70,6 +72,11 @@ function clearForm(form) {
         return this.name != 'stepNumber'
     });
     matches.remove();
-    matches = $('#endMsg');
+
+    matches = form.find('label');
     matches.remove();
+
+    matches = form.find('p');
+    matches.remove();
+
 }

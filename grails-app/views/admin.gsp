@@ -93,7 +93,8 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a></p>
+        <p>&copy; 2013 Company, Inc. &middot; <a href="#">Privacy</a> &middot; <a href="#">Terms</a> </p>
+    <p><g:link url="dbconsole/">DB Console</g:link> </p>
     </footer>
 
 </div><!-- /.container -->
