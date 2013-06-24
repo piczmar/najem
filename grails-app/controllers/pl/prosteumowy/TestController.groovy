@@ -25,7 +25,7 @@ class TestController {
                 <h3>Umowa Najmu</h3>
                 <h1>{{firstName}} {{lastName}}</h1>Blog: {{blogURL}}
                 """
-        }else{
+        } else {
             templateText =
                 """
                 <h3>Cos zupelnie innego</h3>
@@ -35,7 +35,7 @@ class TestController {
         render text: ["response": templateText] as JSON, contentType: 'application/json', status: status
     }
 
-    def getInputs(){
+    def getInputs() {
         println "params: ${params}"
 
         def stepNo = params.stepNumber as Long
@@ -50,8 +50,8 @@ class TestController {
 //                step: step
 //                order('number')
 //            }
-            data = Input.findAllByStep(step)
-        }else{
+            data = Input.findAllByStep(step, [sort: "number", order: "asc"])
+        } else {
             data = [end: true]
         }
         println data

@@ -64,6 +64,7 @@
             <div class="control-group">
                 <div id="demoFormInput" class="controls">
                     <input type="hidden" id="stepNumber" name="stepNumber" value="1" />
+                    <input type="hidden" id="docNumber" name="docNumber" value="1" />
                 </div>
             </div>
 
