@@ -1,0 +1,7 @@
+.elements {
+    border-collapse: collapse;
+}
+
+.elements td, .elements th {
+    border: 1px solid #ccc;
+}
